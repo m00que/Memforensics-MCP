@@ -1,17 +1,17 @@
-# 内存取证 MCP 工具清单 (143个)
+# 内存取证 MCP 工具清单 (182个)
 
 ## 工具总览
 
 | 引擎 | 工具数量 | 底层 | 运行环境 |
 |------|---------|------|----------|
-| **搜索工具** | 5 个 | `tools_index.json` | Python |
-| **MemProcFS** | 35 个 | `vmmpyc.pyd` API | `toolkit/python3/` |
-| **Volatility 2** | 55 个 | `vol.py` / `vol.exe` | `toolkit/python27/` |
-| **Volatility 3** | 48 个 | `volatility3/` 框架 | `toolkit/python3/` |
+| **搜索工具** | 6 个 | `tools_index.json` | Python |
+| **MemProcFS** | 36 个 | `vmmpyc.pyd` API | `toolkit/python3/` |
+| **Volatility 2** | 77 个 | `vol.py` / `vol.exe` | `toolkit/python27/` |
+| **Volatility 3** | 63 个 | `volatility3/` 框架 | `toolkit/python3/` |
 
 ---
 
-## 零、搜索工具 (5个) - AI入口点
+## 零、搜索工具 (6个) - AI入口点
 
 | # | 工具名 | 功能 | 状态 |
 |---|--------|------|------|
@@ -20,10 +20,11 @@
 | 0 | `list_tools_by_engine` | 按引擎列出工具 | ✅ |
 | 0 | `get_tool_info` | 获取单个工具详情 | ✅ |
 | 0 | `get_unique_features` | 获取各引擎独有功能 | ✅ |
+| 0 | `forensics_help` | 获取内存取证 MCP 服务帮助信息 | ✅ |
 
 ---
 
-## 一、MemProcFS 工具 (35个)
+## 一、MemProcFS 工具 (36个)
 
 ### 1.1 系统信息 (System) - 5个
 | # | 工具名 | 功能 | 数据源 | 状态 |
@@ -90,15 +91,20 @@
 | 32 | `mem_findevil` | 综合恶意检测 | `/forensic/csv/findevil.csv` | ⬜ |
 | 33 | `mem_yara` | YARA扫描 | `/forensic/csv/yara.csv` | ⬜ |
 
-### 1.9 时间线 (Timeline) - 4个
+### 1.9 时间线 (Timeline) - 2个
 | # | 工具名 | 功能 | 数据源 | 状态 |
 |---|--------|------|--------|------|
 | 34 | `mem_timeline_all` | 综合时间线 | `/forensic/csv/timeline_all.csv` | ⬜ |
 | 35 | `mem_timeline_process` | 进程时间线 | `/forensic/csv/timeline_process.csv` | ⬜ |
 
+### 1.10 数据导出 (Dump) - 1个
+| # | 工具名 | 功能 | 数据源 | 状态 |
+|---|--------|------|--------|------|
+| 36 | `mem_procdump_hash` | 进程可执行文件哈希 (MD5/SHA1/SHA256) | VMM API | ⬜ |
+
 ---
 
-## 二、Volatility 2 工具 (55个)
+## 二、Volatility 2 工具 (77个)
 
 ### 2.1 系统信息 (System) - 6个
 | # | 工具名 | 插件 | 功能 | 输出 | 状态 |
@@ -235,7 +241,7 @@
 
 ---
 
-## 三、Volatility 3 工具 (48个)
+## 三、Volatility 3 工具 (63个)
 
 ### 3.1 系统信息 (System) - 4个
 | # | 工具名 | 插件 | 功能 | 输出 | 状态 |
@@ -358,10 +364,11 @@
 
 | 引擎 | 总数 | 已完成 | 进度 |
 |------|------|--------|------|
-| MemProcFS | 35 | 35 | ✅ 100% |
-| Volatility 2 | 55 | 55 | ✅ 100% |
-| Volatility 3 | 48 | 48 | ✅ 100% |
-| **总计** | **138** | **138** | **✅ 100%** |
+| 搜索工具 | 6 | 6 | ✅ 100% |
+| MemProcFS | 36 | 36 | ✅ 100% |
+| Volatility 2 | 77 | 77 | ✅ 100% |
+| Volatility 3 | 63 | 63 | ✅ 100% |
+| **总计** | **182** | **182** | **✅ 100%** |
 
 ---
 
@@ -387,4 +394,4 @@
 
 ---
 
-*最后更新: 2026-01-27*
+*最后更新: 2026-01-29*
