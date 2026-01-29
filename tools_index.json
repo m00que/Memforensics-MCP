@@ -1,0 +1,1426 @@
+{
+  "version": "1.0.0",
+  "total": 138,
+  "tools": [
+    {
+      "id": 1,
+      "name": "mem_info",
+      "engine": "MemProcFS",
+      "category": "系统信息",
+      "description": "获取内存镜像基本信息，包括文件大小、架构、内核版本、进程数量",
+      "keywords": ["镜像", "信息", "基本", "系统", "架构", "内核", "image", "info", "system"]
+    },
+    {
+      "id": 2,
+      "name": "mem_sysinfo",
+      "engine": "MemProcFS",
+      "category": "系统信息",
+      "description": "获取系统详细信息，包括计算机名、域、OS版本、产品类型",
+      "keywords": ["系统", "计算机名", "域", "版本", "详细", "sysinfo", "computer", "domain", "os"]
+    },
+    {
+      "id": 3,
+      "name": "mem_users",
+      "engine": "MemProcFS",
+      "category": "系统信息",
+      "description": "获取用户账户列表，包括SID和用户名",
+      "keywords": ["用户", "账户", "SID", "账号", "user", "account"]
+    },
+    {
+      "id": 4,
+      "name": "mem_dtb",
+      "engine": "MemProcFS",
+      "category": "系统信息",
+      "description": "获取页表基址(DTB)信息，用于内存地址转换分析",
+      "keywords": ["页表", "DTB", "地址", "内存", "转换", "page", "table"]
+    },
+    {
+      "id": 5,
+      "name": "mem_certificates",
+      "engine": "MemProcFS",
+      "category": "系统信息",
+      "description": "获取系统证书列表",
+      "keywords": ["证书", "certificate", "cert", "ssl", "签名"]
+    },
+    {
+      "id": 6,
+      "name": "mem_pslist",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取进程列表，包括PID、PPID、进程名、路径、命令行、创建时间",
+      "keywords": ["进程", "列表", "PID", "process", "pslist", "运行"]
+    },
+    {
+      "id": 7,
+      "name": "mem_pstree",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取进程树结构，显示进程父子关系",
+      "keywords": ["进程", "树", "父子", "关系", "pstree", "parent", "child"]
+    },
+    {
+      "id": 8,
+      "name": "mem_handles",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取进程句柄列表，包括文件、注册表、互斥对象等句柄",
+      "keywords": ["句柄", "handle", "文件", "注册表", "互斥"]
+    },
+    {
+      "id": 9,
+      "name": "mem_modules",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取进程加载的模块/DLL列表",
+      "keywords": ["模块", "DLL", "加载", "module", "library", "动态链接库"]
+    },
+    {
+      "id": 10,
+      "name": "mem_vad",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取进程VAD(虚拟地址描述符)信息，用于内存区域分析",
+      "keywords": ["VAD", "虚拟", "地址", "内存", "区域", "描述符"]
+    },
+    {
+      "id": 11,
+      "name": "mem_threads",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取进程线程列表",
+      "keywords": ["线程", "thread", "TID", "TEB"]
+    },
+    {
+      "id": 12,
+      "name": "mem_heap",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取进程堆信息",
+      "keywords": ["堆", "heap", "内存", "分配"]
+    },
+    {
+      "id": 13,
+      "name": "mem_console",
+      "engine": "MemProcFS",
+      "category": "进程分析",
+      "description": "获取控制台输出内容，从conhost.exe进程提取",
+      "keywords": ["控制台", "console", "命令行", "输出", "conhost", "cmd"]
+    },
+    {
+      "id": 14,
+      "name": "mem_netstat",
+      "engine": "MemProcFS",
+      "category": "网络分析",
+      "description": "获取网络连接状态，包括TCP/UDP连接、本地/远程地址、进程",
+      "keywords": ["网络", "连接", "TCP", "UDP", "IP", "端口", "netstat", "socket"]
+    },
+    {
+      "id": 15,
+      "name": "mem_netstat_timeline",
+      "engine": "MemProcFS",
+      "category": "网络分析",
+      "description": "获取网络活动时间线",
+      "keywords": ["网络", "时间线", "活动", "timeline", "历史"]
+    },
+    {
+      "id": 16,
+      "name": "mem_filescan",
+      "engine": "MemProcFS",
+      "category": "文件系统",
+      "description": "获取内存中的文件对象列表，可按扩展名过滤",
+      "keywords": ["文件", "扫描", "对象", "file", "scan", "查找"]
+    },
+    {
+      "id": 17,
+      "name": "mem_ntfs_timeline",
+      "engine": "MemProcFS",
+      "category": "文件系统",
+      "description": "获取NTFS文件系统时间线",
+      "keywords": ["NTFS", "文件", "时间线", "timeline", "MFT"]
+    },
+    {
+      "id": 18,
+      "name": "mem_dumpfile",
+      "engine": "MemProcFS",
+      "category": "文件系统",
+      "description": "从内存中提取/导出文件",
+      "keywords": ["提取", "导出", "dump", "文件", "恢复"]
+    },
+    {
+      "id": 19,
+      "name": "mem_hivelist",
+      "engine": "MemProcFS",
+      "category": "注册表",
+      "description": "获取注册表Hive列表",
+      "keywords": ["注册表", "hive", "registry", "列表"]
+    },
+    {
+      "id": 20,
+      "name": "mem_printkey",
+      "engine": "MemProcFS",
+      "category": "注册表",
+      "description": "读取注册表键值",
+      "keywords": ["注册表", "键", "值", "registry", "key", "value", "读取"]
+    },
+    {
+      "id": 21,
+      "name": "mem_autoruns",
+      "engine": "MemProcFS",
+      "category": "注册表",
+      "description": "获取自启动项，检查Run/RunOnce等键",
+      "keywords": ["自启动", "启动项", "autorun", "run", "开机", "持久化"]
+    },
+    {
+      "id": 22,
+      "name": "mem_usb_devices",
+      "engine": "MemProcFS",
+      "category": "注册表",
+      "description": "获取USB设备连接历史",
+      "keywords": ["USB", "设备", "U盘", "移动", "存储", "USBSTOR"]
+    },
+    {
+      "id": 23,
+      "name": "mem_network_interfaces",
+      "engine": "MemProcFS",
+      "category": "注册表",
+      "description": "获取网络接口配置信息",
+      "keywords": ["网络", "接口", "IP", "配置", "网卡", "adapter"]
+    },
+    {
+      "id": 24,
+      "name": "mem_reg_timeline",
+      "engine": "MemProcFS",
+      "category": "注册表",
+      "description": "获取注册表修改时间线",
+      "keywords": ["注册表", "时间线", "修改", "timeline", "历史"]
+    },
+    {
+      "id": 25,
+      "name": "mem_services",
+      "engine": "MemProcFS",
+      "category": "服务驱动",
+      "description": "获取系统服务列表",
+      "keywords": ["服务", "service", "svc", "后台"]
+    },
+    {
+      "id": 26,
+      "name": "mem_drivers",
+      "engine": "MemProcFS",
+      "category": "服务驱动",
+      "description": "获取驱动程序列表",
+      "keywords": ["驱动", "driver", "内核", "kernel", "sys"]
+    },
+    {
+      "id": 27,
+      "name": "mem_tasks",
+      "engine": "MemProcFS",
+      "category": "服务驱动",
+      "description": "获取计划任务",
+      "keywords": ["计划", "任务", "task", "scheduled", "定时"]
+    },
+    {
+      "id": 28,
+      "name": "mem_driver_detail",
+      "engine": "MemProcFS",
+      "category": "服务驱动",
+      "description": "获取驱动详细信息",
+      "keywords": ["驱动", "详情", "driver", "详细"]
+    },
+    {
+      "id": 29,
+      "name": "mem_pypykatz",
+      "engine": "MemProcFS",
+      "category": "凭据提取",
+      "description": "使用pypykatz从lsass进程提取凭据，包括密码哈希、明文密码、Kerberos票据",
+      "keywords": ["凭据", "密码", "哈希", "lsass", "pypykatz", "NT", "NTLM", "kerberos", "票据", "credential"]
+    },
+    {
+      "id": 30,
+      "name": "mem_regsecrets",
+      "engine": "MemProcFS",
+      "category": "凭据提取",
+      "description": "从注册表提取凭据，包括SAM、LSA Secrets、SECURITY",
+      "keywords": ["注册表", "凭据", "SAM", "LSA", "SECURITY", "secret", "密钥"]
+    },
+    {
+      "id": 31,
+      "name": "mem_kerberos_tickets",
+      "engine": "MemProcFS",
+      "category": "凭据提取",
+      "description": "导出Kerberos票据(.kirbi文件)",
+      "keywords": ["kerberos", "票据", "ticket", "kirbi", "TGT", "TGS"]
+    },
+    {
+      "id": 32,
+      "name": "mem_findevil",
+      "engine": "MemProcFS",
+      "category": "恶意检测",
+      "description": "综合恶意检测(FindEvil)，检测可疑进程、代码注入等",
+      "keywords": ["恶意", "检测", "evil", "可疑", "malware", "病毒", "木马"]
+    },
+    {
+      "id": 33,
+      "name": "mem_yara",
+      "engine": "MemProcFS",
+      "category": "恶意检测",
+      "description": "YARA规则扫描匹配结果",
+      "keywords": ["YARA", "规则", "扫描", "匹配", "特征", "签名"]
+    },
+    {
+      "id": 34,
+      "name": "mem_timeline_all",
+      "engine": "MemProcFS",
+      "category": "时间线",
+      "description": "获取综合时间线，合并进程、网络、文件、注册表等事件",
+      "keywords": ["时间线", "综合", "timeline", "事件", "历史", "全部"]
+    },
+    {
+      "id": 35,
+      "name": "mem_timeline_process",
+      "engine": "MemProcFS",
+      "category": "时间线",
+      "description": "获取进程创建/退出时间线",
+      "keywords": ["时间线", "进程", "创建", "退出", "timeline"]
+    },
+    {
+      "id": 36,
+      "name": "vol2_imageinfo",
+      "engine": "Volatility2",
+      "category": "系统信息",
+      "description": "获取镜像信息并自动检测Profile",
+      "keywords": ["镜像", "信息", "profile", "检测", "imageinfo", "系统"]
+    },
+    {
+      "id": 37,
+      "name": "vol2_kdbgscan",
+      "engine": "Volatility2",
+      "category": "系统信息",
+      "description": "扫描KDBG结构，用于确定Profile",
+      "keywords": ["KDBG", "扫描", "内核", "调试", "profile"]
+    },
+    {
+      "id": 38,
+      "name": "vol2_shutdowntime",
+      "engine": "Volatility2",
+      "category": "系统信息",
+      "description": "获取系统关机时间",
+      "keywords": ["关机", "时间", "shutdown", "关闭"]
+    },
+    {
+      "id": 39,
+      "name": "vol2_envars",
+      "engine": "Volatility2",
+      "category": "系统信息",
+      "description": "获取环境变量",
+      "keywords": ["环境", "变量", "env", "environment", "PATH"]
+    },
+    {
+      "id": 40,
+      "name": "vol2_verinfo",
+      "engine": "Volatility2",
+      "category": "系统信息",
+      "description": "获取PE文件版本信息",
+      "keywords": ["版本", "PE", "信息", "version", "文件"]
+    },
+    {
+      "id": 41,
+      "name": "vol2_auditpol",
+      "engine": "Volatility2",
+      "category": "系统信息",
+      "description": "获取审计策略",
+      "keywords": ["审计", "策略", "audit", "policy", "安全"]
+    },
+    {
+      "id": 42,
+      "name": "vol2_pslist",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "通过EPROCESS链表获取进程列表",
+      "keywords": ["进程", "列表", "pslist", "EPROCESS", "运行"]
+    },
+    {
+      "id": 43,
+      "name": "vol2_psscan",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "扫描进程，包括隐藏和已终止的进程",
+      "keywords": ["进程", "扫描", "隐藏", "终止", "psscan", "scan"]
+    },
+    {
+      "id": 44,
+      "name": "vol2_pstree",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取进程树",
+      "keywords": ["进程", "树", "pstree", "父子"]
+    },
+    {
+      "id": 45,
+      "name": "vol2_psxview",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "多视图隐藏进程检测，交叉验证发现rootkit隐藏的进程",
+      "keywords": ["隐藏", "进程", "检测", "psxview", "rootkit", "cross"]
+    },
+    {
+      "id": 46,
+      "name": "vol2_cmdline",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取进程命令行参数",
+      "keywords": ["命令行", "参数", "cmdline", "command"]
+    },
+    {
+      "id": 47,
+      "name": "vol2_cmdscan",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "扫描CMD历史命令",
+      "keywords": ["CMD", "历史", "命令", "cmdscan", "shell"]
+    },
+    {
+      "id": 48,
+      "name": "vol2_consoles",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取控制台输出内容",
+      "keywords": ["控制台", "console", "输出", "命令"]
+    },
+    {
+      "id": 49,
+      "name": "vol2_dlllist",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取进程加载的DLL列表",
+      "keywords": ["DLL", "模块", "加载", "dlllist"]
+    },
+    {
+      "id": 50,
+      "name": "vol2_handles",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取进程句柄",
+      "keywords": ["句柄", "handle", "文件", "对象"]
+    },
+    {
+      "id": 51,
+      "name": "vol2_getsids",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取进程SID(安全标识符)，用于确定进程运行权限",
+      "keywords": ["SID", "安全", "标识符", "权限", "用户", "组"]
+    },
+    {
+      "id": 52,
+      "name": "vol2_privs",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取进程权限",
+      "keywords": ["权限", "privilege", "特权", "privs"]
+    },
+    {
+      "id": 53,
+      "name": "vol2_vadinfo",
+      "engine": "Volatility2",
+      "category": "进程分析",
+      "description": "获取进程VAD信息",
+      "keywords": ["VAD", "虚拟", "地址", "内存"]
+    },
+    {
+      "id": 54,
+      "name": "vol2_netscan",
+      "engine": "Volatility2",
+      "category": "网络分析",
+      "description": "网络连接扫描(Vista/7/8/10)",
+      "keywords": ["网络", "连接", "netscan", "TCP", "UDP", "socket"]
+    },
+    {
+      "id": 55,
+      "name": "vol2_connections",
+      "engine": "Volatility2",
+      "category": "网络分析",
+      "description": "网络连接(Windows XP)",
+      "keywords": ["网络", "连接", "XP", "connections"]
+    },
+    {
+      "id": 56,
+      "name": "vol2_filescan",
+      "engine": "Volatility2",
+      "category": "文件系统",
+      "description": "文件对象扫描",
+      "keywords": ["文件", "扫描", "filescan", "对象"]
+    },
+    {
+      "id": 57,
+      "name": "vol2_mftparser",
+      "engine": "Volatility2",
+      "category": "文件系统",
+      "description": "MFT(主文件表)解析",
+      "keywords": ["MFT", "文件表", "NTFS", "解析", "mftparser"]
+    },
+    {
+      "id": 58,
+      "name": "vol2_symlinkscan",
+      "engine": "Volatility2",
+      "category": "文件系统",
+      "description": "符号链接扫描",
+      "keywords": ["符号", "链接", "symlink", "快捷方式"]
+    },
+    {
+      "id": 59,
+      "name": "vol2_dumpfiles",
+      "engine": "Volatility2",
+      "category": "文件系统",
+      "description": "从内存导出文件",
+      "keywords": ["导出", "文件", "dump", "提取", "恢复"]
+    },
+    {
+      "id": 60,
+      "name": "vol2_hivelist",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "获取注册表Hive列表",
+      "keywords": ["注册表", "hive", "列表", "hivelist"]
+    },
+    {
+      "id": 61,
+      "name": "vol2_printkey",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "打印注册表键值",
+      "keywords": ["注册表", "键", "值", "printkey", "查询"]
+    },
+    {
+      "id": 62,
+      "name": "vol2_hivedump",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "Hive结构转储",
+      "keywords": ["hive", "转储", "dump", "注册表"]
+    },
+    {
+      "id": 63,
+      "name": "vol2_dumpregistry",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "导出全部注册表Hive文件",
+      "keywords": ["导出", "注册表", "hive", "dump"]
+    },
+    {
+      "id": 64,
+      "name": "vol2_userassist",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "获取UserAssist程序执行记录",
+      "keywords": ["UserAssist", "执行", "记录", "程序", "运行"]
+    },
+    {
+      "id": 65,
+      "name": "vol2_shellbags",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "ShellBags分析，获取文件夹访问记录",
+      "keywords": ["ShellBags", "文件夹", "访问", "记录", "浏览"]
+    },
+    {
+      "id": 66,
+      "name": "vol2_shimcache",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "获取Shimcache(应用程序兼容性缓存)，程序执行痕迹",
+      "keywords": ["Shimcache", "兼容性", "缓存", "执行", "痕迹"]
+    },
+    {
+      "id": 67,
+      "name": "vol2_autoruns",
+      "engine": "Volatility2",
+      "category": "注册表",
+      "description": "获取自启动项",
+      "keywords": ["自启动", "autorun", "启动项", "持久化"]
+    },
+    {
+      "id": 68,
+      "name": "vol2_hashdump",
+      "engine": "Volatility2",
+      "category": "凭据提取",
+      "description": "提取SAM密码哈希(LM/NT Hash)",
+      "keywords": ["哈希", "密码", "SAM", "hash", "NT", "LM", "hashdump"]
+    },
+    {
+      "id": 69,
+      "name": "vol2_lsadump",
+      "engine": "Volatility2",
+      "category": "凭据提取",
+      "description": "提取LSA Secrets",
+      "keywords": ["LSA", "secret", "密钥", "凭据", "lsadump"]
+    },
+    {
+      "id": 70,
+      "name": "vol2_cachedump",
+      "engine": "Volatility2",
+      "category": "凭据提取",
+      "description": "提取域缓存凭据(DCC/DCC2)",
+      "keywords": ["域", "缓存", "凭据", "DCC", "cachedump", "domain"]
+    },
+    {
+      "id": 71,
+      "name": "vol2_mimikatz",
+      "engine": "Volatility2",
+      "category": "凭据提取",
+      "description": "[独有] Mimikatz凭据提取，可获取明文密码、哈希、票据",
+      "keywords": ["mimikatz", "密码", "明文", "凭据", "lsass", "哈希", "票据"]
+    },
+    {
+      "id": 72,
+      "name": "vol2_malfind",
+      "engine": "Volatility2",
+      "category": "恶意检测",
+      "description": "代码注入检测，检测RWX权限且含PE头的可疑内存区域",
+      "keywords": ["注入", "恶意", "malfind", "RWX", "PE", "代码", "检测"]
+    },
+    {
+      "id": 73,
+      "name": "vol2_malfinddeep",
+      "engine": "Volatility2",
+      "category": "恶意检测",
+      "description": "深度恶意代码检测",
+      "keywords": ["恶意", "深度", "检测", "malfinddeep"]
+    },
+    {
+      "id": 74,
+      "name": "vol2_apihooks",
+      "engine": "Volatility2",
+      "category": "恶意检测",
+      "description": "API钩子检测(IAT/EAT/Inline)",
+      "keywords": ["API", "钩子", "hook", "IAT", "EAT", "inline"]
+    },
+    {
+      "id": 75,
+      "name": "vol2_apihooksdeep",
+      "engine": "Volatility2",
+      "category": "恶意检测",
+      "description": "深度API钩子检测",
+      "keywords": ["API", "钩子", "深度", "hook"]
+    },
+    {
+      "id": 76,
+      "name": "vol2_ldrmodules",
+      "engine": "Volatility2",
+      "category": "恶意检测",
+      "description": "隐藏DLL检测，通过比较三个PEB链表发现未链接的DLL",
+      "keywords": ["隐藏", "DLL", "ldrmodules", "PEB", "模块", "检测"]
+    },
+    {
+      "id": 77,
+      "name": "vol2_hollowfind",
+      "engine": "Volatility2",
+      "category": "恶意检测",
+      "description": "进程镂空检测(Process Hollowing)",
+      "keywords": ["镂空", "hollowing", "进程", "注入", "检测"]
+    },
+    {
+      "id": 78,
+      "name": "vol2_modules",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "获取内核模块列表",
+      "keywords": ["内核", "模块", "kernel", "driver", "modules"]
+    },
+    {
+      "id": 79,
+      "name": "vol2_modscan",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "扫描内核模块(包括已卸载)",
+      "keywords": ["内核", "模块", "扫描", "modscan"]
+    },
+    {
+      "id": 80,
+      "name": "vol2_driverscan",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "扫描驱动对象",
+      "keywords": ["驱动", "扫描", "driver", "driverscan"]
+    },
+    {
+      "id": 81,
+      "name": "vol2_driverirp",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "检测驱动IRP钩子",
+      "keywords": ["驱动", "IRP", "钩子", "hook"]
+    },
+    {
+      "id": 82,
+      "name": "vol2_ssdt",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "获取SSDT(系统服务描述符表)，检测SSDT钩子",
+      "keywords": ["SSDT", "系统调用", "钩子", "hook", "syscall"]
+    },
+    {
+      "id": 83,
+      "name": "vol2_callbacks",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "获取内核回调函数",
+      "keywords": ["回调", "callback", "内核", "通知"]
+    },
+    {
+      "id": 84,
+      "name": "vol2_timers",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "获取内核定时器",
+      "keywords": ["定时器", "timer", "内核"]
+    },
+    {
+      "id": 85,
+      "name": "vol2_unloadedmodules",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "获取已卸载的内核模块",
+      "keywords": ["卸载", "模块", "内核", "unloaded"]
+    },
+    {
+      "id": 86,
+      "name": "vol2_devicetree",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "获取设备树",
+      "keywords": ["设备", "树", "device", "驱动"]
+    },
+    {
+      "id": 87,
+      "name": "vol2_getservicesids",
+      "engine": "Volatility2",
+      "category": "内核分析",
+      "description": "获取服务SID",
+      "keywords": ["服务", "SID", "service"]
+    },
+    {
+      "id": 88,
+      "name": "vol2_svcscan",
+      "engine": "Volatility2",
+      "category": "服务分析",
+      "description": "服务扫描",
+      "keywords": ["服务", "扫描", "svcscan", "service"]
+    },
+    {
+      "id": 89,
+      "name": "vol2_windows",
+      "engine": "Volatility2",
+      "category": "GUI分析",
+      "description": "[独有] 获取窗口信息",
+      "keywords": ["窗口", "window", "GUI", "界面"]
+    },
+    {
+      "id": 90,
+      "name": "vol2_wintree",
+      "engine": "Volatility2",
+      "category": "GUI分析",
+      "description": "[独有] 获取窗口树",
+      "keywords": ["窗口", "树", "wintree", "GUI"]
+    },
+    {
+      "id": 91,
+      "name": "vol2_deskscan",
+      "engine": "Volatility2",
+      "category": "GUI分析",
+      "description": "[独有] 桌面扫描",
+      "keywords": ["桌面", "desktop", "扫描", "GUI"]
+    },
+    {
+      "id": 92,
+      "name": "vol2_screenshot",
+      "engine": "Volatility2",
+      "category": "GUI分析",
+      "description": "[独有] 截图重建，从内存重建窗口截图",
+      "keywords": ["截图", "screenshot", "图像", "窗口", "重建"]
+    },
+    {
+      "id": 93,
+      "name": "vol2_clipboard",
+      "engine": "Volatility2",
+      "category": "GUI分析",
+      "description": "[独有] 获取剪贴板内容",
+      "keywords": ["剪贴板", "clipboard", "复制", "粘贴"]
+    },
+    {
+      "id": 94,
+      "name": "vol2_messagehooks",
+      "engine": "Volatility2",
+      "category": "GUI分析",
+      "description": "[独有] 消息钩子检测",
+      "keywords": ["消息", "钩子", "message", "hook", "键盘"]
+    },
+    {
+      "id": 95,
+      "name": "vol2_eventhooks",
+      "engine": "Volatility2",
+      "category": "GUI分析",
+      "description": "[独有] 事件钩子检测",
+      "keywords": ["事件", "钩子", "event", "hook"]
+    },
+    {
+      "id": 96,
+      "name": "vol2_iehistory",
+      "engine": "Volatility2",
+      "category": "浏览器分析",
+      "description": "[独有] IE浏览历史记录",
+      "keywords": ["IE", "浏览", "历史", "网页", "history", "browser"]
+    },
+    {
+      "id": 97,
+      "name": "vol2_chromehistory",
+      "engine": "Volatility2",
+      "category": "浏览器分析",
+      "description": "[独有] Chrome浏览历史",
+      "keywords": ["Chrome", "浏览", "历史", "谷歌", "browser"]
+    },
+    {
+      "id": 98,
+      "name": "vol2_firefoxhistory",
+      "engine": "Volatility2",
+      "category": "浏览器分析",
+      "description": "[独有] Firefox浏览历史",
+      "keywords": ["Firefox", "浏览", "历史", "火狐", "browser"]
+    },
+    {
+      "id": 99,
+      "name": "vol2_trustrecords",
+      "engine": "Volatility2",
+      "category": "浏览器分析",
+      "description": "[独有] Office信任记录，记录用户信任过的文档",
+      "keywords": ["Office", "信任", "文档", "Word", "Excel"]
+    },
+    {
+      "id": 100,
+      "name": "vol2_prefetch",
+      "engine": "Volatility2",
+      "category": "浏览器分析",
+      "description": "[独有] 预读文件分析",
+      "keywords": ["预读", "prefetch", "执行", "痕迹"]
+    },
+    {
+      "id": 101,
+      "name": "vol2_bitlocker",
+      "engine": "Volatility2",
+      "category": "加密分析",
+      "description": "[独有] BitLocker密钥提取",
+      "keywords": ["BitLocker", "加密", "密钥", "磁盘", "解密"]
+    },
+    {
+      "id": 102,
+      "name": "vol2_truecryptsummary",
+      "engine": "Volatility2",
+      "category": "加密分析",
+      "description": "[独有] TrueCrypt摘要",
+      "keywords": ["TrueCrypt", "加密", "摘要", "磁盘"]
+    },
+    {
+      "id": 103,
+      "name": "vol2_truecryptmaster",
+      "engine": "Volatility2",
+      "category": "加密分析",
+      "description": "[独有] TrueCrypt主密钥",
+      "keywords": ["TrueCrypt", "密钥", "加密", "master"]
+    },
+    {
+      "id": 104,
+      "name": "vol2_timeliner",
+      "engine": "Volatility2",
+      "category": "时间线",
+      "description": "综合时间线",
+      "keywords": ["时间线", "timeline", "事件", "历史"]
+    },
+    {
+      "id": 105,
+      "name": "vol2_mutantscan",
+      "engine": "Volatility2",
+      "category": "其他",
+      "description": "互斥对象扫描",
+      "keywords": ["互斥", "mutant", "mutex", "对象"]
+    },
+    {
+      "id": 106,
+      "name": "vol2_atomscan",
+      "engine": "Volatility2",
+      "category": "其他",
+      "description": "原子表扫描",
+      "keywords": ["原子", "atom", "表", "扫描"]
+    },
+    {
+      "id": 107,
+      "name": "vol2_sessions",
+      "engine": "Volatility2",
+      "category": "其他",
+      "description": "会话信息",
+      "keywords": ["会话", "session", "登录"]
+    },
+    {
+      "id": 108,
+      "name": "vol2_bigpools",
+      "engine": "Volatility2",
+      "category": "其他",
+      "description": "大内存池",
+      "keywords": ["内存池", "bigpool", "分配"]
+    },
+    {
+      "id": 109,
+      "name": "vol2_procdump",
+      "engine": "Volatility2",
+      "category": "数据导出",
+      "description": "导出进程可执行文件",
+      "keywords": ["导出", "进程", "dump", "exe", "提取"]
+    },
+    {
+      "id": 110,
+      "name": "vol2_memdump",
+      "engine": "Volatility2",
+      "category": "数据导出",
+      "description": "导出进程完整内存",
+      "keywords": ["导出", "内存", "dump", "memdump"]
+    },
+    {
+      "id": 111,
+      "name": "vol2_dlldump",
+      "engine": "Volatility2",
+      "category": "数据导出",
+      "description": "导出DLL",
+      "keywords": ["导出", "DLL", "dump", "模块"]
+    },
+    {
+      "id": 112,
+      "name": "vol2_vaddump",
+      "engine": "Volatility2",
+      "category": "数据导出",
+      "description": "导出VAD区域",
+      "keywords": ["导出", "VAD", "dump", "内存"]
+    },
+    {
+      "id": 113,
+      "name": "vol3_info",
+      "engine": "Volatility3",
+      "category": "系统信息",
+      "description": "获取系统/镜像信息，自动检测无需Profile",
+      "keywords": ["系统", "信息", "镜像", "info", "自动"]
+    },
+    {
+      "id": 114,
+      "name": "vol3_crashinfo",
+      "engine": "Volatility3",
+      "category": "系统信息",
+      "description": "获取崩溃转储信息",
+      "keywords": ["崩溃", "crash", "转储", "dump"]
+    },
+    {
+      "id": 115,
+      "name": "vol3_verinfo",
+      "engine": "Volatility3",
+      "category": "系统信息",
+      "description": "获取PE版本信息",
+      "keywords": ["版本", "PE", "verinfo"]
+    },
+    {
+      "id": 116,
+      "name": "vol3_envars",
+      "engine": "Volatility3",
+      "category": "系统信息",
+      "description": "获取环境变量",
+      "keywords": ["环境", "变量", "env"]
+    },
+    {
+      "id": 117,
+      "name": "vol3_pslist",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取进程列表",
+      "keywords": ["进程", "列表", "pslist"]
+    },
+    {
+      "id": 118,
+      "name": "vol3_psscan",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "进程扫描(包括隐藏/终止进程)",
+      "keywords": ["进程", "扫描", "隐藏", "psscan"]
+    },
+    {
+      "id": 119,
+      "name": "vol3_pstree",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取进程树",
+      "keywords": ["进程", "树", "pstree"]
+    },
+    {
+      "id": 120,
+      "name": "vol3_psxview",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "跨视图进程检测",
+      "keywords": ["隐藏", "进程", "psxview", "检测"]
+    },
+    {
+      "id": 121,
+      "name": "vol3_cmdline",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取命令行参数",
+      "keywords": ["命令行", "参数", "cmdline"]
+    },
+    {
+      "id": 122,
+      "name": "vol3_dlllist",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取DLL列表",
+      "keywords": ["DLL", "模块", "dlllist"]
+    },
+    {
+      "id": 123,
+      "name": "vol3_handles",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取进程句柄",
+      "keywords": ["句柄", "handle"]
+    },
+    {
+      "id": 124,
+      "name": "vol3_getsids",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取进程完整SID列表，包括组成员身份",
+      "keywords": ["SID", "安全", "标识符", "权限", "组", "getsids"]
+    },
+    {
+      "id": 125,
+      "name": "vol3_privileges",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取进程权限",
+      "keywords": ["权限", "privilege", "特权"]
+    },
+    {
+      "id": 126,
+      "name": "vol3_ldrmodules",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "LDR模块检测(隐藏DLL)",
+      "keywords": ["隐藏", "DLL", "ldrmodules", "模块"]
+    },
+    {
+      "id": 127,
+      "name": "vol3_vadinfo",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取VAD信息",
+      "keywords": ["VAD", "虚拟", "地址"]
+    },
+    {
+      "id": 128,
+      "name": "vol3_vadwalk",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "VAD遍历",
+      "keywords": ["VAD", "遍历", "vadwalk"]
+    },
+    {
+      "id": 129,
+      "name": "vol3_sessions",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取登录会话",
+      "keywords": ["会话", "session", "登录"]
+    },
+    {
+      "id": 130,
+      "name": "vol3_joblinks",
+      "engine": "Volatility3",
+      "category": "进程分析",
+      "description": "获取作业对象",
+      "keywords": ["作业", "job", "对象"]
+    },
+    {
+      "id": 131,
+      "name": "vol3_threads",
+      "engine": "Volatility3",
+      "category": "线程分析",
+      "description": "[独有] 获取线程列表",
+      "keywords": ["线程", "thread", "TID"]
+    },
+    {
+      "id": 132,
+      "name": "vol3_thrdscan",
+      "engine": "Volatility3",
+      "category": "线程分析",
+      "description": "[独有] 线程扫描",
+      "keywords": ["线程", "扫描", "thrdscan"]
+    },
+    {
+      "id": 133,
+      "name": "vol3_suspicious_threads",
+      "engine": "Volatility3",
+      "category": "线程分析",
+      "description": "[独有] 可疑线程检测，检测被注入或恶意的线程",
+      "keywords": ["可疑", "线程", "恶意", "注入", "检测"]
+    },
+    {
+      "id": 134,
+      "name": "vol3_suspended_threads",
+      "engine": "Volatility3",
+      "category": "线程分析",
+      "description": "[独有] 挂起线程检测，常用于注入技术",
+      "keywords": ["挂起", "线程", "suspended", "注入"]
+    },
+    {
+      "id": 135,
+      "name": "vol3_netscan",
+      "engine": "Volatility3",
+      "category": "网络分析",
+      "description": "网络连接扫描",
+      "keywords": ["网络", "连接", "netscan", "TCP", "UDP"]
+    },
+    {
+      "id": 136,
+      "name": "vol3_netstat",
+      "engine": "Volatility3",
+      "category": "网络分析",
+      "description": "网络状态",
+      "keywords": ["网络", "状态", "netstat"]
+    },
+    {
+      "id": 137,
+      "name": "vol3_filescan",
+      "engine": "Volatility3",
+      "category": "文件系统",
+      "description": "文件对象扫描",
+      "keywords": ["文件", "扫描", "filescan"]
+    },
+    {
+      "id": 138,
+      "name": "vol3_dumpfiles",
+      "engine": "Volatility3",
+      "category": "文件系统",
+      "description": "从内存导出文件",
+      "keywords": ["导出", "文件", "dump"]
+    },
+    {
+      "id": 139,
+      "name": "vol3_hivelist",
+      "engine": "Volatility3",
+      "category": "注册表",
+      "description": "获取注册表Hive列表",
+      "keywords": ["注册表", "hive", "列表"]
+    },
+    {
+      "id": 140,
+      "name": "vol3_hivescan",
+      "engine": "Volatility3",
+      "category": "注册表",
+      "description": "注册表Hive扫描",
+      "keywords": ["注册表", "hive", "扫描"]
+    },
+    {
+      "id": 141,
+      "name": "vol3_printkey",
+      "engine": "Volatility3",
+      "category": "注册表",
+      "description": "打印注册表键值",
+      "keywords": ["注册表", "键", "值", "printkey"]
+    },
+    {
+      "id": 142,
+      "name": "vol3_userassist",
+      "engine": "Volatility3",
+      "category": "注册表",
+      "description": "获取UserAssist记录",
+      "keywords": ["UserAssist", "执行", "记录"]
+    },
+    {
+      "id": 143,
+      "name": "vol3_certificates",
+      "engine": "Volatility3",
+      "category": "注册表",
+      "description": "获取证书信息",
+      "keywords": ["证书", "certificate"]
+    },
+    {
+      "id": 144,
+      "name": "vol3_hashdump",
+      "engine": "Volatility3",
+      "category": "凭据提取",
+      "description": "提取SAM密码哈希",
+      "keywords": ["哈希", "密码", "SAM", "hashdump"]
+    },
+    {
+      "id": 145,
+      "name": "vol3_lsadump",
+      "engine": "Volatility3",
+      "category": "凭据提取",
+      "description": "提取LSA Secrets",
+      "keywords": ["LSA", "secret", "lsadump"]
+    },
+    {
+      "id": 146,
+      "name": "vol3_cachedump",
+      "engine": "Volatility3",
+      "category": "凭据提取",
+      "description": "提取域缓存凭据",
+      "keywords": ["域", "缓存", "凭据", "cachedump"]
+    },
+    {
+      "id": 147,
+      "name": "vol3_malfind",
+      "engine": "Volatility3",
+      "category": "恶意检测",
+      "description": "代码注入检测",
+      "keywords": ["注入", "恶意", "malfind", "检测"]
+    },
+    {
+      "id": 148,
+      "name": "vol3_hollowprocesses",
+      "engine": "Volatility3",
+      "category": "恶意检测",
+      "description": "[独有] 进程镂空检测(Process Hollowing)",
+      "keywords": ["镂空", "hollowing", "进程", "注入", "检测"]
+    },
+    {
+      "id": 149,
+      "name": "vol3_processghosting",
+      "engine": "Volatility3",
+      "category": "恶意检测",
+      "description": "[独有] 进程幽灵检测(Process Ghosting)",
+      "keywords": ["幽灵", "ghosting", "进程", "检测"]
+    },
+    {
+      "id": 150,
+      "name": "vol3_skeleton_key",
+      "engine": "Volatility3",
+      "category": "恶意检测",
+      "description": "[独有] 骨架密钥检测，检测域控上的Skeleton Key攻击",
+      "keywords": ["骨架", "skeleton", "密钥", "域控", "攻击"]
+    },
+    {
+      "id": 151,
+      "name": "vol3_direct_syscalls",
+      "engine": "Volatility3",
+      "category": "恶意检测",
+      "description": "[独有] 直接系统调用检测，检测绕过NTDLL的EDR逃逸技术",
+      "keywords": ["直接", "系统调用", "syscall", "EDR", "逃逸", "NTDLL"]
+    },
+    {
+      "id": 152,
+      "name": "vol3_indirect_syscalls",
+      "engine": "Volatility3",
+      "category": "恶意检测",
+      "description": "[独有] 间接系统调用检测",
+      "keywords": ["间接", "系统调用", "syscall", "检测"]
+    },
+    {
+      "id": 153,
+      "name": "vol3_modules",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "获取内核模块列表",
+      "keywords": ["内核", "模块", "modules"]
+    },
+    {
+      "id": 154,
+      "name": "vol3_modscan",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "扫描内核模块",
+      "keywords": ["内核", "模块", "扫描", "modscan"]
+    },
+    {
+      "id": 155,
+      "name": "vol3_driverscan",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "扫描驱动对象",
+      "keywords": ["驱动", "扫描", "driverscan"]
+    },
+    {
+      "id": 156,
+      "name": "vol3_drivermodule",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "获取驱动模块信息",
+      "keywords": ["驱动", "模块", "drivermodule"]
+    },
+    {
+      "id": 157,
+      "name": "vol3_driverirp",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "获取驱动IRP",
+      "keywords": ["驱动", "IRP", "driverirp"]
+    },
+    {
+      "id": 158,
+      "name": "vol3_ssdt",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "获取SSDT表",
+      "keywords": ["SSDT", "系统调用", "ssdt"]
+    },
+    {
+      "id": 159,
+      "name": "vol3_callbacks",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "获取内核回调",
+      "keywords": ["回调", "callback", "内核"]
+    },
+    {
+      "id": 160,
+      "name": "vol3_timers",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "获取内核定时器",
+      "keywords": ["定时器", "timer", "内核"]
+    },
+    {
+      "id": 161,
+      "name": "vol3_devicetree",
+      "engine": "Volatility3",
+      "category": "内核分析",
+      "description": "获取设备树",
+      "keywords": ["设备", "树", "devicetree"]
+    },
+    {
+      "id": 162,
+      "name": "vol3_getservicesids",
+      "engine": "Volatility3",
+      "category": "服务分析",
+      "description": "获取服务SID",
+      "keywords": ["服务", "SID", "service"]
+    },
+    {
+      "id": 163,
+      "name": "vol3_svclist",
+      "engine": "Volatility3",
+      "category": "服务分析",
+      "description": "获取服务列表",
+      "keywords": ["服务", "列表", "svclist"]
+    },
+    {
+      "id": 164,
+      "name": "vol3_svcdiff",
+      "engine": "Volatility3",
+      "category": "服务分析",
+      "description": "服务差异对比",
+      "keywords": ["服务", "差异", "svcdiff"]
+    },
+    {
+      "id": 165,
+      "name": "vol3_bigpools",
+      "engine": "Volatility3",
+      "category": "内存池",
+      "description": "获取大内存池",
+      "keywords": ["内存池", "bigpool"]
+    },
+    {
+      "id": 166,
+      "name": "vol3_poolscanner",
+      "engine": "Volatility3",
+      "category": "内存池",
+      "description": "池扫描器",
+      "keywords": ["池", "扫描", "poolscanner"]
+    },
+    {
+      "id": 167,
+      "name": "vol3_strings",
+      "engine": "Volatility3",
+      "category": "其他",
+      "description": "字符串搜索",
+      "keywords": ["字符串", "搜索", "strings"]
+    },
+    {
+      "id": 168,
+      "name": "vol3_symlinkscan",
+      "engine": "Volatility3",
+      "category": "其他",
+      "description": "符号链接扫描",
+      "keywords": ["符号", "链接", "symlink"]
+    },
+    {
+      "id": 169,
+      "name": "vol3_mutantscan",
+      "engine": "Volatility3",
+      "category": "其他",
+      "description": "互斥对象扫描",
+      "keywords": ["互斥", "mutant", "mutex"]
+    },
+    {
+      "id": 170,
+      "name": "vol3_mbrscan",
+      "engine": "Volatility3",
+      "category": "其他",
+      "description": "MBR扫描",
+      "keywords": ["MBR", "引导", "扫描"]
+    },
+    {
+      "id": 171,
+      "name": "vol3_shimcachemem",
+      "engine": "Volatility3",
+      "category": "其他",
+      "description": "Shimcache内存分析",
+      "keywords": ["Shimcache", "兼容性", "缓存"]
+    },
+    {
+      "id": 172,
+      "name": "vol3_iat",
+      "engine": "Volatility3",
+      "category": "其他",
+      "description": "导入地址表(IAT)",
+      "keywords": ["IAT", "导入", "地址表"]
+    },
+    {
+      "id": 173,
+      "name": "vol3_procdump",
+      "engine": "Volatility3",
+      "category": "数据导出",
+      "description": "导出进程可执行文件",
+      "keywords": ["导出", "进程", "dump"]
+    },
+    {
+      "id": 174,
+      "name": "vol3_memmap",
+      "engine": "Volatility3",
+      "category": "数据导出",
+      "description": "导出进程内存映射",
+      "keywords": ["导出", "内存", "映射", "memmap"]
+    },
+    {
+      "id": 175,
+      "name": "vol3_pedump",
+      "engine": "Volatility3",
+      "category": "数据导出",
+      "description": "PE文件导出",
+      "keywords": ["导出", "PE", "pedump"]
+    }
+  ],
+  "categories": [
+    "系统信息",
+    "进程分析",
+    "网络分析",
+    "文件系统",
+    "注册表",
+    "服务驱动",
+    "凭据提取",
+    "恶意检测",
+    "内核分析",
+    "GUI分析",
+    "浏览器分析",
+    "加密分析",
+    "线程分析",
+    "服务分析",
+    "内存池",
+    "时间线",
+    "数据导出",
+    "其他"
+  ]
+}
