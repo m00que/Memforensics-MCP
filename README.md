@@ -19,9 +19,9 @@
 }
 ```
 
-
 ## 使用方法
-由于`mem` `vol2` `vol3`有很多功能，以及还有很多插件，过多的工具会影响agent执行任务的能力，因此设计了搜索工具，可以在`skill`或者提示词中告诉ai先按需求搜索对应的工具再执行
+
+由于 `mem` `vol2` `vol3`有很多功能，以及还有很多插件，过多的工具会影响agent执行任务的能力，因此设计了搜索工具，可以在 `skill`或者提示词中告诉ai先按需求搜索对应的工具再执行
 
 ## 工具列表 (共182个)
 
@@ -412,31 +412,3 @@
 | `vol3_procdump` | 进程导出     |
 | `vol3_memmap`   | 内存映射导出 |
 | `vol3_pedump`   | PE 文件导出  |
-
----
-
-## 引擎特色功能
-
-### MemProcFS 独有
-
-- 实时文件系统虚拟化
-- FindEvil 综合恶意检测
-- pypykatz 集成凭据提取
-- 快速文件导出
-
-### Volatility 2 独有
-
-- Mimikatz 明文密码提取
-- GUI/桌面分析 (窗口、截图、剪贴板)
-- 浏览器历史记录 (IE/Chrome/Firefox)
-- 加密工具密钥提取 (BitLocker/TrueCrypt)
-- 丰富的社区插件支持
-
-### Volatility 3 独有
-
-- 直接/间接系统调用检测 (EDR 逃逸技术检测)
-- 进程幽灵检测 (ProcessGhosting)
-- 骨架密钥检测 (Skeleton Key)
-- 可疑/挂起线程分析
-- 现代 Windows 版本支持
-- 更好的性能和稳定性
